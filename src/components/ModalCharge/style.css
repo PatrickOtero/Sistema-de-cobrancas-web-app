@@ -1,0 +1,118 @@
+.input-modal-charge {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-modal-charge input {
+    font-family: Nunito;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    border: 1px solid #D0D5DD;
+    border-radius: 8px;
+    color: #3F3F55;
+    margin-bottom: 1.5rem;
+}
+
+#input-name {
+    padding: 1rem 1.8rem;
+}
+
+.input-due-value input {
+    width: 47rem;
+    display: flex;
+    justify-content: space-between;
+    font-family: Nunito;
+    font-size: 16px;
+    line-height: 24px;
+    border: 1px solid #D0D5DD;
+    border-radius: 8px;
+    color: #3F3F55;
+    margin-bottom: 1.5rem;
+    padding: 1rem 1.8rem;
+}
+
+.input-due input{
+    max-width: 22.9rem;
+}
+
+.input-value input{
+    max-width: 22.9rem;
+}
+
+.modal_charge-section{
+    display: flex;
+    flex-direction: column;
+}
+
+.modal_charge-section span {
+    margin-bottom: 2rem;
+}
+
+.input-radio label:hover{
+    cursor: pointer;
+}
+
+.status{
+    font-family: Nunito, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: #3F3F55;
+}
+
+.input-radio input{
+    border: none;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+
+.input-radio label{
+    display: flex;
+    align-items: center;
+    border-radius: 1rem;
+}
+
+.input-radio input:checked{
+    content: url('../../assets/checked.svg');
+}
+
+.input-radio input:before{
+    border: none;
+    color: #C8C8D7;
+}
+
+.input-pay {
+    background-color: #F0F0F5;
+    border-radius: 1rem;
+}
+
+.input-pay span {
+    margin-top: 1.5rem;
+    margin-left: 2rem;
+}
+
+.input-pending {
+    margin-top: 0.5rem;
+    background-color: #F0F0F5;
+    border-radius: 1rem;
+}
+
+.input-pending span {
+    margin-top: 1.5rem;
+
+    margin-left: 2rem;
+}
+
+.form-control {
+    font-family: Nunito;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    color: #3F3F55;
+    margin-left: 1rem;
+}
+
+.errors-status{
+    margin-top: 1rem;
+}

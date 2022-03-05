@@ -1,0 +1,41 @@
+@keyframes surgirClientes {
+    0% {
+      opacity: 0;
+      transform: scale(0.1);
+    }
+    60% {
+      transform: scale(1.05);
+      opacity: 0.5;
+    }
+  
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+/* .customers-table::-webkit-scrollbar {
+    width: 0.5rem;          
+}
+  
+.customers-table::-webkit-scrollbar-track {
+background: lightgray;        
+}
+
+.customers-table::-webkit-scrollbar-thumb {
+background-color: gray;  
+border-radius: 2rem;       
+border: 0.3rem solid gray;  
+} */
+
+/* .customer-header-container {
+    width: 40%;
+} */
+
+.customers-upside {
+    animation: surgirClientes 300ms;
+}
+
+.customers-table {
+    animation: surgirClientes 300ms;
+}

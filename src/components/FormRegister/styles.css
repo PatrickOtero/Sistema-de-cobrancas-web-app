@@ -1,0 +1,26 @@
+.register-right-section{
+    display: flex;
+    width: 35.5rem;
+    height: 35.5rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+}
+
+.register-right-section h2{
+    margin-bottom: 3.2rem;
+    font-family: Montserrat, sans-serif;
+    color: #343447;
+}
+
+.register-right-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.register-right-section_footer{
+    font-size: 1.4rem;
+    margin-top: 2rem;
+    color: #3F3F55;
+}

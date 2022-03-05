@@ -1,0 +1,60 @@
+.modal-details-container{
+    font-family: Nunito;
+    font-size: 16px;
+    line-height: 24px;
+
+}
+
+.modal-details-container span{
+    font-weight: bold;
+    
+    color: #3F3F55;
+}
+
+.modal-details-phrase{
+    font-weight: normal;
+
+    margin-bottom: 2.4rem;
+
+    color: #3F3F55;
+}
+
+.modal-details-descrip{
+    height: 10rem;
+}
+
+.modal-details-flex{
+    display: flex;
+    align-items: flex-start;
+}
+
+.modal-details-space{
+    width: 24.3rem;
+}
+
+.pending p{
+    background: #FCF6DC;
+    border-radius: 0.8rem;
+    margin-top: 0.7rem;
+    padding: 0.1rem 0.5rem;
+    color: #C5A605;
+    font-family: Nunito, sans-serif;
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+}
+
+.pay p{
+    align-self: center;
+    background: #EEF6F6;
+    border-radius: 0.8rem;
+    margin-top: 0.7rem;
+    padding: 0.1rem 0.5rem;
+    color: #1FA7AF;
+    font-family: Nunito, sans-serif;
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+    margin-right: 2.6rem;
+    margin-left: 0.1rem;
+}

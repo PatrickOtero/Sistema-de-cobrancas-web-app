@@ -1,0 +1,15 @@
+.pink-button{
+    all: unset;
+    cursor: pointer;
+    color: white;
+    font-family: Nunito;
+    font-size: 1.6rem;
+    background: #DA0175;
+    border-radius: 1rem;
+    padding: 0.5rem 4rem;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,45 @@
+.container-modal-client{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-modal-client-phrase{
+    text-align: center;
+    font-family: Montserrat, sans-serif;
+    font-size: 1.6rem;
+
+    color: #CC7800;
+}
+
+.container-modal-client-buttons{
+    width: 21rem;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+}
+
+.container-modal-client-buttons button {
+    all: unset;
+    cursor: pointer;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.container-modal-client-button-decline{
+    padding: 0.1rem 3rem;
+    background: #F2D6D0;
+    color: #AE1100;
+    border-radius: 4px;
+}
+
+.container-modal-client-button-confirm{
+    padding: 0.1rem 3rem;
+    background: #ACD9C5;
+    color: #034A2A;
+    border-radius: 4px;
+}

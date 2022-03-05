@@ -1,0 +1,102 @@
+.button-charges {
+    all: unset;
+    cursor: pointer;
+    display: flex;
+}
+
+.details-icons{
+    all: unset;
+    cursor: pointer;
+    margin-right: 2rem;
+}
+
+.chargescustomer-details{
+    display: flex;
+    padding: 1rem 6rem;
+    border-top: 0.1rem solid #EFF0F6;
+    /* justify-content: space-between; */
+    font-family: Nunito, sans-serif;
+    font-size: 1.4rem;
+    line-height: 4rem;
+    color: #6E6E85;
+}
+.idCobr {
+    width: 3rem;
+    margin-right: 13rem;
+}
+.date {
+    margin-right: 21rem;
+}
+
+.date p{
+    width: 3rem;
+}
+
+.value{
+    margin-right: 15.5rem;
+}
+
+.value p{
+    width: 5rem;
+}
+
+.status {
+    margin-right: 15rem;
+}
+
+.description{
+
+    white-space: nowrap;
+    margin-right: 15rem;
+}
+
+.description p{
+    width: 15rem;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.icons{
+    display: flex;
+}
+
+/* 
+.overdue {
+    background: #FFEFEF;
+    border-radius: 0.8rem;
+    margin-top: 0.7rem;
+    padding: 0.1rem 0.5rem;
+    color: #971D1D;
+    font-family: Nunito, sans-serif;
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+} */
+
+.pending {
+    background: #FCF6DC;
+    border-radius: 0.8rem;
+    margin-top: 0.7rem;
+    padding: 0.1rem 0.5rem;
+    color: #C5A605;
+    font-family: Nunito, sans-serif;
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+}
+
+.pay {
+    align-self: center;
+    background: #EEF6F6;
+    border-radius: 0.8rem;
+    margin-top: 0.7rem;
+    padding: 0.1rem 0.5rem;
+    color: #1FA7AF;
+    font-family: Nunito, sans-serif;
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+    margin-right: 2.6rem;
+    margin-left: 0.1rem;
+}

@@ -1,0 +1,142 @@
+* {
+    font-family: Nunito, sans-serif;
+}
+
+.register input {
+    padding: 1rem 6rem 1rem 1rem;
+    margin-bottom: 2rem;
+    background: #FFFFFF;
+    color: #667085;
+    border: 0.1rem solid #D0D5DD;
+    box-shadow: 0rem 0.1rem 0.2rem rgba(16, 24, 40, 0.05);
+    box-sizing: border-box;
+    font-family: Inter, sans-serif;
+    border-radius: 0.8rem;
+}
+
+.register label {
+    margin-bottom: 0.6rem;
+    font-size: 1.4rem;
+    color: #343447;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-change_button {
+    all: unset;
+    cursor: pointer;
+}
+
+.errors {
+    font-size: 12px;
+    color: red;
+    margin-top: -1rem;
+}
+
+.errors-last {
+    font-size: 12px;
+    color: red;
+    margin-top: 0.2rem;
+}
+
+.register {
+    display: flex;
+    width: 100vw;
+    height: 100%;
+}
+
+.register-left{
+    width: 30%;
+    height: 100vh;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+    color: #034A2A;
+    background-color: #F0F0F5;
+}
+
+.register-left-title{
+    padding-top: 10rem;
+    font-weight: 600;
+    font-family: Montserrat, sans-serif;
+    color: #034A2A;
+    font-size: 1.4rem;
+}
+
+.register-left-title img {
+    width: 38rem;
+}
+
+.register-right {
+    background-color: #F8F8F9;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-right-section{
+    display: flex;
+    width: 35.5rem;
+    height: 35.5rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+}
+
+.register-right-section h2{
+    margin-bottom: 3.2rem;
+    font-family: Montserrat, sans-serif;
+    color: #343447;
+}
+
+.register-right-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.second-label {
+    margin-top: 1rem;
+}
+
+a{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 130%;
+    text-decoration-line: underline;
+    color: #DA0175;
+}
+
+.input-password {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8rem;
+}
+
+.input-password img {
+    width: 2.4rem;
+    filter: invert(49%) sepia(8%) saturate(758%) hue-rotate(201deg) brightness(90%) contrast(81%);
+}
+
+.input-password button{
+    all: unset;
+    cursor: pointer;
+    margin: -5.2rem 1.5rem;
+    align-self: flex-end;
+}
+
+.section_footer {
+    width: 26rem;
+    display: flex;
+    margin-top: 10rem;
+    justify-self: center;
+    justify-content: space-between;
+}

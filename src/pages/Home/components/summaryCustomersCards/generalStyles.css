@@ -1,0 +1,190 @@
+@keyframes surgir {
+    0% {
+      opacity: 0;
+      transform: scale(0.1);
+    }
+    60% {
+      transform: scale(1.2);
+      opacity: 0.5;
+    }
+  
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+.customer-card {
+    animation: surgir 300ms;
+    
+    height: 39.7rem;
+    width: 55.6rem;
+
+    background-color: white;
+    border-radius: 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    box-shadow: 0px 4px 4px 0px #ACD9C540;
+}
+
+.customer-card-header {
+    height: 58px;
+    width: 100%;
+    padding: 16px 20px;
+
+    border-bottom: 2px solid #EFF0F6;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Montserrat', 'sans-serif';
+}
+
+.customer-card-left-elements {
+    margin-right: auto;
+
+    display: flex;
+    align-items: center;
+}
+
+.customer-card-header-text {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 23px;
+    color: #3F3F55;
+
+    margin-left: 20px;
+}
+
+.customer-card-small-colored-value-card {
+    height: 21px;
+    width: 52px;
+    margin-left: 40px;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 21px;
+
+    text-align: center;
+}
+
+.customer-card-table-head {
+    width: 100%;
+    height: 66px;
+    padding-left: 25px;
+
+    font-family: 'Nunito', 'sans';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 50px;
+    letter-spacing: 0.005em;
+    text-align: start;
+    color: #3F3F55;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-bottom: 2px solid #EFF0F6;
+}
+
+.first-text {
+    width: 33%;
+}
+
+.second-text {
+    width: 33%;
+}
+
+.third-text {
+    width: 33%;
+    text-align: start;
+    padding-left: 20px;
+}
+
+.customer-card-table-body {
+    height: 291px;
+    width: 100%;
+
+    border-radius: 0px;
+    
+    font-family: 'Nunito', 'sans-serif';
+
+
+    overflow: hidden;
+}
+
+.customer-card-table-line {
+    width: 100%;
+    height: 56px;
+    padding-left: 25px;
+
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 0.005em;
+    text-align: left;
+    
+    text-align: start;
+    color: #6E6E85;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-bottom: 2px solid #EFF0F6;
+}
+
+.customer-card-table-line:hover {
+    background-color: #EFF0F6;
+}
+
+.customer-card-table-bottom {
+    height: 48px;
+    width: 100%;
+    padding: 12px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom-customer-card-link {
+    all: unset;
+
+    cursor: pointer;
+
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23px;  
+    color: #DA0175;
+
+    text-decoration: underline;
+}
+
+.bottom-customer-card-link:hover {
+    color: #d35e9c;
+}
+
+.empty-customer-list-info-phrase {
+    margin-left: 30px;
+
+    position: relative;
+    bottom: 50px;
+    top: 50px;
+
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 23px;
+    color: #3F3F55;   
+}
