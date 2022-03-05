@@ -9,6 +9,6 @@
 
 **Repositório de Frontend**:
 
-**URL da aplicação funcionando**: https://sistema-de-cobrancas.netlify.app/home
+**URL da aplicação funcionando**: https://sistema-de-cobrancas.netlify.app/
 
 ---
