@@ -1,11 +1,6 @@
 # Sistema de cobranças - web-app (front-end)
 
-## Este repositório deverá servir de base para ser realizado o fork para desenvolvimento da parte de **FRONTEND** do desafio.
-
-## A URL deste repositório deverá ser entregue na plataforma de alunos da Cubos Academy na página da parte de FRONTEND do desafio.
-
-## A versão final do código de cada sprint deverá estar na branch principal do repositório e sim, a cada semana acumulará as alterações das sprints, portanto a segunda sobrescrevendo a primeira e assim por diante.
-
+## Este repositório consiste em um sistema para registro de clientes e suas cobranças e o gerenciamento da relação entre essas entidades.
 ---
 
  ### Links para repositórios de outras stacks e para o deploy da aplicação:
