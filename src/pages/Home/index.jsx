@@ -21,17 +21,9 @@ export default function Home() {
     token,
     openUserEditModal,
     setUserPopUp,
+    removeToken,
+    chargesSummaryData,
   } = useData();
-  useEffect(() => {
-    if (token === "jwt expired") {
-      navigate("/");
-    }
-  });
-  useEffect(() => {
-    if (token) {
-      setActualPage("home");
-    }
-  }, []);
 
   useEffect(() => {
     const loadChargesSummary = async () => {
@@ -47,6 +39,18 @@ export default function Home() {
     };
 
     loadCustomersSummary();
+  }, []);
+
+  useEffect(() => {
+    if (chargesSummaryData === "jwt expired") {
+      removeToken();
+      navigate("/");
+    }
+  });
+  useEffect(() => {
+    if (token) {
+      setActualPage("home");
+    }
   }, []);
 
   useEffect(() => {

@@ -35,7 +35,7 @@ function PaperComponent(props) {
 function ModalCharge() {
   const {
     currentCustomerName, token, setChargesMsg, openModalEditingCharge,
-    editingCustomerData, setOpenModalEditingCharge,
+    editingCustomerData, setOpenModalEditingCharge, setRefreshPage, refreshPage,
   } = useData();
 
   const handleCloseModalToEditing = () => {
@@ -78,6 +78,7 @@ function ModalCharge() {
     } catch (error) {
       ToastifyError(error.message);
     }
+    setRefreshPage(!refreshPage);
   };
 
   return (

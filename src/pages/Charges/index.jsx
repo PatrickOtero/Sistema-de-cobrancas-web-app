@@ -15,8 +15,11 @@ import "./styles.css";
 export default function Charges() {
   const [rowsCharge, setRowsCharge] = useState([]);
   const {
-    setActualPage, token, openUserEditModal, detailsModal, openModalCharge,
-    openModalEditingCharge, openModalDetails, currentCustomerName, refreshPage, setChargesLoading,
+    setActualPage, token,
+    openUserEditModal, detailsModal,
+    openModalCharge, openModalEditingCharge,
+    openModalDetails, currentCustomerName,
+    refreshPage, setChargesLoading,
   } = useData();
   const [sortedCharges, setSortedCharges] = useState();
 
