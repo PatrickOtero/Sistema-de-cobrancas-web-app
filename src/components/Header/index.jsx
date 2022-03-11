@@ -62,10 +62,10 @@ export default function Header({
         <Box className="user-name-and-arrow">
           <b className="user-name-text">{currentUserData.name_user}</b>
           <Box className="user-container-arrow-button">
-            <button type="button" onClick={() => setUserPopUp(!userPopUp)}>
+            <button className="green-arrow-user-name" type="button" onClick={() => setUserPopUp(!userPopUp)}>
               <img src={iconeSeta} alt="Seta" />
+              <PopUp />
             </button>
-            <PopUp />
           </Box>
         </Box>
       </Box>

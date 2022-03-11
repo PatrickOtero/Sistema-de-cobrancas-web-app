@@ -85,7 +85,6 @@ export default function CustomersBarUpside({
             onChange={(e) => setSearchField(e.target.value)}
             InputProps={{
               endAdornment: (
-              // sem o z-index o botão é escondido pelo backgroundColor do textfield
                 <InputAdornment
                   position="end"
                   sx={{ zIndex: "1" }}
