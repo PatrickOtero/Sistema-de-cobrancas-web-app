@@ -49,10 +49,8 @@ function ModalCharge() {
   const onSubmit = async ({
     duedateRaw, valueRaw, name_customer, description, status,
   }) => {
-    console.log(duedateRaw);
     const value = valueRaw.replace(/\.|,/g, "").replace("R$", "").replace("00", "");
     const duedate = duedateRaw.replace(/[/"]/g, "-");
-    console.log(duedate);
     const bodyCharge = {
       name_customer, description, status, value, duedate,
     };

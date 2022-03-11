@@ -26,7 +26,6 @@ export default function TableComponent({ newClient }) {
     }
   }, [newClient]);
 
-  console.log("24234");
   return (
     <TableContainer component={Paper} sx={{ borderRadius: "2rem", maxHeight: "50rem" }}>
       <Table aria-label="caption table">
