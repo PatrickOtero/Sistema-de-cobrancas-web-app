@@ -22,14 +22,22 @@ import "./styles.css";
 import emptySearch from "../../assets/emptySearch.svg";
 
 export default function TableComponent({
-  rows, setRows, sortedCustomers, loadCustomers,
+  rows,
+  setRows,
+  sortedCustomers,
+  loadCustomers,
 }) {
   const {
-    setCurrentClientId, handleCustomerDetails,
-    openModalCharge, setOpenModalCharge,
-    setCurrentCustomerName, customersSummaryData,
-    defaulterFilter, upToDateFilter,
-    homeFilter, customersLoading,
+    setCurrentClientId,
+    handleCustomerDetails,
+    openModalCharge,
+    setOpenModalCharge,
+    setCurrentCustomerName,
+    customersSummaryData,
+    defaulterFilter,
+    upToDateFilter,
+    homeFilter,
+    customersLoading,
     searchFieldCustomers,
   } = useData();
 
@@ -62,50 +70,55 @@ export default function TableComponent({
   };
 
   return (
-    <TableContainer component={Paper} sx={{ borderRadius: "2rem", maxHeight: "50rem" }}>
+    <TableContainer
+      component={Paper}
+      sx={{ borderRadius: "2rem", maxHeight: "50rem" }}
+    >
       <Table aria-label="caption table">
         <TableHead>
-          {rows.length > 0
-        && (
-        <TableRow>
-          <TableCell style={{ fontSize: "1.6rem" }} align="left">
-            <Box display="flex" alignItems="center">
-              <IconButton disableRipple onClick={handleOrderByName}>
-                {sortType === "" && <img src={sortIcon} alt="sort" />}
-                {sortType === "asc" && <img src={sortIconAsc} alt="sort" />}
-                {sortType === "desc" && <img src={sortIconDesc} alt="sort" />}
-              </IconButton>
-              Cliente
-            </Box>
-          </TableCell>
-          <TableCell style={{ fontSize: "1.6rem" }} align="left">
-            CPF
-          </TableCell>
-          <TableCell style={{ fontSize: "1.6rem" }} align="left">
-            E-mail
-          </TableCell>
-          <TableCell style={{ fontSize: "1.6rem" }} align="left">
-            Telefone
-          </TableCell>
-          <TableCell style={{ fontSize: "1.6rem" }} align="left">
-            Status
-          </TableCell>
-          <TableCell style={{ fontSize: "1.6rem" }} align="left">
-            Criar cobrança
-          </TableCell>
-        </TableRow>
-        )}
+          {rows.length > 0 && (
+            <TableRow>
+              <TableCell style={{ fontSize: "1.6rem" }} align="left">
+                <Box display="flex" alignItems="center">
+                  <IconButton disableRipple onClick={handleOrderByName}>
+                    {sortType === "" && <img src={sortIcon} alt="sort" />}
+                    {sortType === "asc" && <img src={sortIconAsc} alt="sort" />}
+                    {sortType === "desc" && (
+                      <img src={sortIconDesc} alt="sort" />
+                    )}
+                  </IconButton>
+                  Cliente
+                </Box>
+              </TableCell>
+              <TableCell style={{ fontSize: "1.6rem" }} align="left">
+                CPF
+              </TableCell>
+              <TableCell style={{ fontSize: "1.6rem" }} align="left">
+                E-mail
+              </TableCell>
+              <TableCell style={{ fontSize: "1.6rem" }} align="left">
+                Telefone
+              </TableCell>
+              <TableCell style={{ fontSize: "1.6rem" }} align="left">
+                Status
+              </TableCell>
+              <TableCell style={{ fontSize: "1.6rem" }} align="left">
+                Criar cobrança
+              </TableCell>
+            </TableRow>
+          )}
         </TableHead>
         <TableBody>
           {customersLoading && (
-          <div className="loading-backdrop-customers">
-            <div className="loading-customers">
-              <div className="loader-customers" />
+            <div className="loading-backdrop-customers">
+              <div className="loading-customers">
+                <div className="loader-customers" />
+              </div>
             </div>
-          </div>
           )}
-          {!customersLoading && (defaulterFilter || upToDateFilter)
-           && customersSummaryData[homeFilter]
+          {!customersLoading
+            && (defaulterFilter || upToDateFilter)
+            && customersSummaryData[homeFilter]
             && customersSummaryData[homeFilter].map((customer) => (
               <TableRow key={customer.id} sx={{ fontSize: "1.2rem" }}>
                 <CustomTableCell align="left">
@@ -120,15 +133,15 @@ export default function TableComponent({
                     {customer.name_customer}
                   </IconButton>
                 </CustomTableCell>
-                <CustomTableCell align="left">
-                  {customer.cpf}
-                </CustomTableCell>
+                <CustomTableCell align="left">{customer.cpf}</CustomTableCell>
                 <CustomTableCell align="left">{customer.email}</CustomTableCell>
+                <CustomTableCell align="left">{customer.phone}</CustomTableCell>
                 <CustomTableCell align="left">
-                  {customer.phone}
-                </CustomTableCell>
-                <CustomTableCell align="left">
-                  {customer.status === "Inadimplente" ? <img src={defaulter} alt="Inadimplente" /> : <img src={noun} alt="em dia" />}
+                  {customer.status === "Inadimplente" ? (
+                    <img src={defaulter} alt="Inadimplente" />
+                  ) : (
+                    <img src={noun} alt="em dia" />
+                  )}
                 </CustomTableCell>
                 <CustomTableCell align="left">
                   <IconButton
@@ -140,52 +153,64 @@ export default function TableComponent({
                 </CustomTableCell>
               </TableRow>
             ))}
-          {!customersLoading && (!defaulterFilter && !upToDateFilter)
-           && rows.length > 0 ? rows.map((row) => (
-             <TableRow hover="background-color: #F8F8F9" key={row.id} sx={{ fontSize: "1.2rem" }}>
-               <CustomTableCell align="left">
-                 <IconButton
-                   disableRipple
-                   onClick={() => {
-                     handleGetId(row.id);
-                     setCurrentClientId(row.id);
-                     handleCustomerDetails(row.id);
-                   }}
-                 >
-                   {row.name_customer}
-                 </IconButton>
-               </CustomTableCell>
-               <CustomTableCell align="left">
-                 {row.cpf}
-               </CustomTableCell>
-               <CustomTableCell align="left">{row.email}</CustomTableCell>
-               <CustomTableCell align="left">
-                 {row.phone}
-               </CustomTableCell>
-               <CustomTableCell align="left">
-                 {row.status === "Inadimplente" ? <img src={defaulter} alt="Inadimplente" /> : <img src={noun} alt="Em dia" />}
-               </CustomTableCell>
-               <CustomTableCell>
-                 <IconButton onClick={() => handleOpenChargeModal(row.name_customer)} disableRipple>
-                   <img src={newCharge} alt="Criar cobrança" />
-                 </IconButton>
-               </CustomTableCell>
-             </TableRow>
-
-            )) : !customersLoading && searchFieldCustomers && (
-            <Box sx={{
-              display: "flex",
-              justifyContent: "center",
-              marginBottom: "2rem",
-            }}
-            >
-              <Box
-                component="img"
-                src={emptySearch}
-                alt="sem resultados pesquisa"
-                width="70rem"
-              />
-            </Box>
+          {!customersLoading
+          && !defaulterFilter
+          && !upToDateFilter
+          && rows.length > 0
+            ? rows.map((row) => (
+              <TableRow
+                hover="background-color: #F8F8F9"
+                key={row.id}
+                sx={{ fontSize: "1.2rem" }}
+              >
+                <CustomTableCell align="left">
+                  <IconButton
+                    disableRipple
+                    onClick={() => {
+                      handleGetId(row.id);
+                      setCurrentClientId(row.id);
+                      handleCustomerDetails(row.id);
+                    }}
+                  >
+                    {row.name_customer}
+                  </IconButton>
+                </CustomTableCell>
+                <CustomTableCell align="left">{row.cpf}</CustomTableCell>
+                <CustomTableCell align="left">{row.email}</CustomTableCell>
+                <CustomTableCell align="left">{row.phone}</CustomTableCell>
+                <CustomTableCell align="left">
+                  {row.status === "Inadimplente" ? (
+                    <img src={defaulter} alt="Inadimplente" />
+                  ) : (
+                    <img src={noun} alt="Em dia" />
+                  )}
+                </CustomTableCell>
+                <CustomTableCell>
+                  <IconButton
+                    onClick={() => handleOpenChargeModal(row.name_customer)}
+                    disableRipple
+                  >
+                    <img src={newCharge} alt="Criar cobrança" />
+                  </IconButton>
+                </CustomTableCell>
+              </TableRow>
+            ))
+            : !customersLoading
+              && searchFieldCustomers && (
+                <Box
+                  sx={{
+                    display: "flex",
+                    justifyContent: "center",
+                    marginBottom: "2rem",
+                  }}
+                >
+                  <Box
+                    component="img"
+                    src={emptySearch}
+                    alt="sem resultados pesquisa"
+                    width="70rem"
+                  />
+                </Box>
             )}
         </TableBody>
         {openModalCharge && <ModalCharge />}

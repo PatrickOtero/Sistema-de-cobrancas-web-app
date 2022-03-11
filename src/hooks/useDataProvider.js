@@ -125,7 +125,7 @@ export default function Provider() {
       setEditingCostumer(costumer[0]);
       setCurrentClientData(costumer[0]);
       setCurrentCustomerName(costumer[0].name_customer);
-      setCurrentCustomer(id);
+      setCurrentCustomer(costumer[0].id);
       ToastifyError(costumer[0]);
       setCustomersDetailsLoading(false);
     } catch (error) {

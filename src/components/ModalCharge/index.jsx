@@ -8,18 +8,19 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogTitle from "@mui/material/DialogTitle";
 import Paper from "@mui/material/Paper";
 import { Box } from "@mui/system";
+import { useEffect } from "react";
 import Draggable from "react-draggable";
-import { useForm, Controller } from "react-hook-form";
+import { Controller, useForm } from "react-hook-form";
 import InputMask from "react-input-mask";
 import NumberFormat from "react-number-format";
 import close from "../../assets/close.svg";
 import documentImage from "../../assets/document.svg";
+import Toastify from "../../helpers/toastify/Toastify";
+import ToastifyError from "../../helpers/toastify/ToastifyError";
+import useData from "../../hooks/useData";
 import schemaCharges from "../../validations/schemaCharge";
 import "./style.css";
 import { modalClientStyles } from "./styles";
-import useData from "../../hooks/useData";
-import Toastify from "../../helpers/toastify/Toastify";
-import ToastifyError from "../../helpers/toastify/ToastifyError";
 
 function PaperComponent(props) {
   return (
@@ -35,8 +36,15 @@ function PaperComponent(props) {
 function ModalCharge() {
   const {
     setOpenModalCharge, openModalCharge, currentCustomerName, token,
-    currentCustomer, setAddingCharges, setChargesMsg,
+    currentCustomer, setAddingCharges, setChargesMsg, handleCustomerDetails, currentClientId,
   } = useData();
+
+  useEffect(() => {
+    const handleLoadDetailCustomer = async () => {
+      await handleCustomerDetails(currentClientId);
+    };
+    handleLoadDetailCustomer();
+  }, [openModalCharge]);
 
   const handleClose = () => {
     setOpenModalCharge(!openModalCharge);
