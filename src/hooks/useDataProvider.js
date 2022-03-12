@@ -29,7 +29,7 @@ export default function Provider() {
   const [editingCostumer, setEditingCostumer] = useState();
   const [currentCustomerName, setCurrentCustomerName] = useState("");
   const [currentClientData, setCurrentClientData] = useState();
-  const [currentClientId, setCurrentClientId] = useLocalStorage("customerId", 0);
+  const [currentClientId, setCurrentClientId, removeCurrentClientId] = useLocalStorage("customerId", 0);
   const [charges, setCharges] = useState([]);
   const [chargesMsg, setChargesMsg] = useState("");
   const [openModalCharge, setOpenModalCharge] = useState(false);
@@ -202,6 +202,7 @@ export default function Provider() {
     handleCustomerDetails,
     currentClientId,
     setCurrentClientId,
+    removeCurrentClientId,
     handleGetChargesCustomer,
     charges,
     setCharges,

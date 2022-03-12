@@ -49,7 +49,8 @@ export default function TableComponent({
     navigate(`/clientes/${id}`);
   };
 
-  const handleOpenChargeModal = (name) => {
+  const handleOpenChargeModal = (name, customerId) => {
+    setCurrentClientId(customerId);
     setCurrentCustomerName(name);
     setOpenModalCharge(!openModalCharge);
   };
@@ -145,7 +146,7 @@ export default function TableComponent({
                 </CustomTableCell>
                 <CustomTableCell align="left">
                   <IconButton
-                    onClick={() => handleOpenChargeModal(customer.name_customer)}
+                    onClick={() => handleOpenChargeModal(customer.name_customer, customer.id)}
                     disableRipple
                   >
                     <img src={newCharge} alt="Criar cobrança" />
@@ -187,7 +188,7 @@ export default function TableComponent({
                 </CustomTableCell>
                 <CustomTableCell>
                   <IconButton
-                    onClick={() => handleOpenChargeModal(row.name_customer)}
+                    onClick={() => handleOpenChargeModal(row.name_customer, row.id)}
                     disableRipple
                   >
                     <img src={newCharge} alt="Criar cobrança" />

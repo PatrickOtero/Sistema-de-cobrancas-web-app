@@ -35,7 +35,9 @@ export default function ModalToEdit() {
   const [userEditLoading, setUserEditLoading] = useState(false);
 
   const handleEditUser = async () => {
+    if (editPass !== editConfirmPass) return;
     setUserEditLoading(true);
+
     try {
       const bodyToSend = {
         name_user: editUserName,

@@ -60,7 +60,7 @@ function ModalCharge() {
     const value = valueRaw.replace(/\.|,/g, "").replace("R$", "").replace("00", "");
     const duedate = duedateRaw.replace(/[/"]/g, "-");
     const bodyCharge = {
-      name_customer, description, status, value, duedate,
+      name_customer, description, status, value, duedate, currentCustomer,
     };
 
     try {
